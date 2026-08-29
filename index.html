@@ -11,7 +11,8 @@
             height: 100%;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: #f4f7f6;
-            overflow: hidden; 
+            display: flex;
+            flex-direction: column;
         }
         .header {
             background-color: #121212;
@@ -36,15 +37,41 @@
             font-size: 0.8rem;
             font-weight: bold;
         }
-        .iframe-container {
-            width: 100%;
-            height: calc(100vh - 55px); 
-            border: none;
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
         }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .content h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        .content p {
+            color: #666;
+            margin-bottom: 35px;
+            max-width: 500px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+        .btn {
+            background-color: #209aa8;
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(32, 154, 168, 0.3);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background-color: #177b87;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -54,8 +81,14 @@
         <span class="badge">Interactive Portfolio</span>
     </div>
     
-    <div class="iframe-container">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRG3UF-_aWEgsAcU8pA43-pjJ6id_gH5C8cmV8cr0d84UGf_mTn3CBmGbFS5EOoZ-GuuAG3cGqmCqYc/pubhtml?gid=1875445097&amp;single=true&amp;widget=true&amp;headers=false" frameborder="0"></iframe>
+    <div class="content">
+        <h2>Explore the Data</h2>
+        <p>Dive into the interactive Business Intelligence Dashboard to view dynamic revenue metrics, order trends, and payment analysis.</p>
+        
+        <!-- This button links directly to your published Google Sheet in a new tab -->
+        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRG3UF-_aWEgsAcU8pA43-pjJ6id_gH5C8cmV8cr0d84UGf_mTn3CBmGbFS5EOoZ-GuuAG3cGqmCqYc/pubhtml?gid=1875445097&single=true" target="_blank" class="btn">
+            View Interactive Dashboard 📊
+        </a>
     </div>
 </body>
 </html>
